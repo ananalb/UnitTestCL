@@ -23,7 +23,7 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.Add(number);
+            collectionOfNumbers.AddMethod(number);
             actual = collectionOfNumbers.Count;
 
             // Assert
@@ -41,7 +41,7 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.Add(number);
+            collectionOfNumbers.AddMethod(number);
             actual = collectionOfNumbers.Capacity;
 
             // Assert
