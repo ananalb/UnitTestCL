@@ -67,7 +67,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Add_ItemToIndex_IndexAtZero()
+        public void Add_ItemsToList_()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
@@ -77,7 +77,7 @@ namespace CustomListUnitTest
             int number2 = 11;
             int number3 = 12;
             int number4 = 13;
-            int expected = 9;
+            int expected = 5;
             int actual;
 
             // Act
@@ -87,7 +87,7 @@ namespace CustomListUnitTest
             collectionOfNumbers.AddMethod(number2);
             collectionOfNumbers.AddMethod(number3);
             collectionOfNumbers.AddMethod(number4);
-            actual = collectionOfNumbers[0];
+            actual = collectionOfNumbers.Count;
 
             // Assert
             Assert.AreEqual(expected, actual);
