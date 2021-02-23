@@ -110,7 +110,6 @@ namespace CustomListUnitTest
         [TestMethod]
         public void Remove_ItemsFromIndex_IndexCapacityEight()
         {
-
             CustomList<int> collectionOfNumbers = new CustomList<int>();
 
             int number = 9;
@@ -139,7 +138,5 @@ namespace CustomListUnitTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
-
-
     }
 }
