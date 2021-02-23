@@ -10,14 +10,14 @@ namespace CustomListUnitTest
         public void Add_NameToIndex_NameAtIndexZero()
         {
 
-            CustomList<string> collectionOfNumbers = new CustomList<string>();
+            CustomList<string> collectionOfNames = new CustomList<string>();
 
             string name = "Lara";
             string expected = "Lara";
             string actual;
 
             // Act           
-            collectionOfNumbers.AddMethod(name);
+            collectionOfNames.AddMethod(name);
             actual = collectionOfNames[0];
 
             // Assert
