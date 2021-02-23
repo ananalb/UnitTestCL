@@ -17,7 +17,7 @@ namespace CustomListUnitTest
             string actual;
 
             // Act           
-            collectionOfNames.AddMethod(name);
+            collectionOfNames.StringMethod(name);
             actual = collectionOfNames[0];
 
             // Assert
