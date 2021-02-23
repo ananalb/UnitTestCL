@@ -67,6 +67,26 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
+        public void Add_ItemToIndex_IndexAtOneIsTen()
+        {
+
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+            int number = 9;
+            int number1 = 10;
+            int expected = 10;
+            int actual;
+
+            // Act
+            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.AddMethod(number1);
+            actual = collectionOfNumbers[1];
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void Add_ItemsToList_CountOfFive()
         {
 
