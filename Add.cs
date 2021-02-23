@@ -48,7 +48,7 @@ namespace CustomListUnitTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Add_ItemToIndex_IndexAtZero()
+        public void Add_ItemToIndex_IndexAtZeroIsNine()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
@@ -67,7 +67,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Add_ItemsToList_()
+        public void Add_ItemsToList_CountOfFive()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
@@ -92,6 +92,33 @@ namespace CustomListUnitTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        public void Add_ItemsToList_CapacityOfEight()
+        {
+
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+            int number = 9;
+            int number1 = 10;
+            int number2 = 11;
+            int number3 = 12;
+            int number4 = 13;
+            int expected = 8;
+            int actual;
+
+            // Act
+
+            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.AddMethod(number1);
+            collectionOfNumbers.AddMethod(number2);
+            collectionOfNumbers.AddMethod(number3);
+            collectionOfNumbers.AddMethod(number4);
+            actual = collectionOfNumbers.Capacity;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
     }
 }
