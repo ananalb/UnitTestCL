@@ -77,7 +77,7 @@ namespace CustomListUnitTest
             Assert.AreEqual(expected, actual);
         }
 
-        public void Remove_ItemsFromList_CountOfSix()
+        public void Remove_ItemFromList_CountOfSix()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
