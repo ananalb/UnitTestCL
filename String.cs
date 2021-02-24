@@ -4,23 +4,24 @@ using CustomListUnitTestProj;
 
 namespace CustomListUnitTest
 {
-    class String
+    [TestClass]
+    public class String
     {
         [TestMethod]
-        public void Add_NameToIndex_NameAtIndexZero()
+        public void add_nametoindex_nameatindexzero()
         {
 
-            CustomList<string> collectionOfNames = new CustomList<string>();
+            CustomList<string> collectionofnames = new CustomList<string>();
 
-            string name = "Lara";
-            string expected = "Lara";
+            string name = "lara";
+            string expected = "lara";
             string actual;
 
-            // Act           
-            collectionOfNames.AddMethod(name);
-            actual = collectionOfNames[0];
+            // act           
+            collectionofnames.AddMethod(name);
+            actual = collectionofnames.ToString();
 
-            // Assert
+            // assert
             Assert.AreEqual(expected, actual);
         }
 
@@ -32,13 +33,13 @@ namespace CustomListUnitTest
 
             string name = "Lara";
             string name1 = "Eve";
-            int expected = 2;
-            int actual;
+            string expected = "LaraEve";
+            string actual;
 
             // Act           
             collectionOfNames.AddMethod(name);
             collectionOfNames.AddMethod(name1);
-            actual = collectionOfNames.Count;
+            actual = collectionOfNames.ToString();
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -48,18 +49,20 @@ namespace CustomListUnitTest
         public void Add_StringsToIndex_IndexCapacityFour()
         {
 
-            CustomList<string> collectionOfNumbers = new CustomList<string>();
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
 
-            string name = "Lara";
-            string name1 = "Eve";
-            int expected = 4;
-            int actual;
+            int number1 = 2;
+            int number2 = 3;
+            int number3 = 4;
+            string expected = "234";
+            string actual;
 
             // Act
 
-            collectionOfNumbers.AddMethod(name);
-            collectionOfNumbers.AddMethod(name1);
-            actual = collectionOfNumbers.Capacity;
+            collectionOfNumbers.AddMethod(number1);
+            collectionOfNumbers.AddMethod(number2);
+            collectionOfNumbers.AddMethod(number3);
+            actual = collectionOfNumbers.ToString(); 
 
             // Assert
             Assert.AreEqual(expected, actual);

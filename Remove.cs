@@ -5,7 +5,7 @@ using CustomListUnitTestProj;
 namespace CustomListUnitTest
 {
     [TestClass]
-    class Remove
+    public class Remove
     {
         [TestMethod]
         public void Remove_Item_CountDecreasesByOne()
@@ -15,15 +15,16 @@ namespace CustomListUnitTest
             CustomList<int> collectionOfNumbers = new CustomList<int>();
 
             int number = 9;
-            int number1 = 10;
-            int expected = 1;
+            //int number1 = 10;
+            int expected = 0;
             int actual;
 
             // Act
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
+            //collectionOfNumbers.AddMethod(number);
+            //collectionOfNumbers.AddMethod(number1);
             collectionOfNumbers.RemoveMethod(number);
             actual = collectionOfNumbers.Count;
+           
 
             // Assert
             Assert.AreEqual(expected, actual);
@@ -67,11 +68,12 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number); 
+            collectionOfNumbers.AddMethod(number);
             collectionOfNumbers.AddMethod(number1);
             collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.RemoveMethod(number); 
+            collectionOfNumbers.RemoveMethod(number);
             actual = collectionOfNumbers[0];
+           
 
             // Assert
             Assert.AreEqual(expected, actual);
