@@ -44,45 +44,45 @@ namespace CustomListUnitTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
-        //[TestMethod]
-        //public void Add_ItemToIndex_IndexAtZeroIsNine()
-        //{
+        [TestMethod]
+        public void Add_ItemToIndex_IndexAtZeroIsNine()
+        {
 
-        //    CustomList<int> collectionOfNumbers = new CustomList<int>();
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
 
-        //    int number = 9;
-        //    int expected = 9;
-        //    int actual;
+            int number = 9;
+            int expected = 9;
+            int actual;
 
-        //    // Act
+            // Act
 
-        //    collectionOfNumbers.AddMethod(number);
-        //    actual = collectionOfNumbers[0];
+            collectionOfNumbers.AddMethod(number);
+            actual = collectionOfNumbers[0];
 
-        //    // Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
 
-        //[TestMethod]
-        //public void Add_ItemToIndex_IndexAtOneIsTen()
-        //{
+        [TestMethod]
+        public void Add_ItemToIndex_IndexAtOneIsTen()
+        {
 
-        //    CustomList<int> collectionOfNumbers = new CustomList<int>();
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
 
-        //    int number = 9;
-        //    int number1 = 10;
-        //    int expected = 10;
-        //    int actual;
+            int number = 9;
+            int number1 = 10;
+            int expected = 10;
+            int actual;
 
-        //    // Act
-        //    collectionOfNumbers.AddMethod(number);
-        //    collectionOfNumbers.AddMethod(number1);
-        //    actual = collectionOfNumbers[1];
+            // Act
+            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.AddMethod(number1);
+            actual = collectionOfNumbers[1];
 
-        //    // Assert
-        //    Assert.AreEqual(expected, actual);
-        //}
-    
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
 
         [TestMethod]

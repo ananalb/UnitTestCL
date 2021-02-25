@@ -15,13 +15,13 @@ namespace CustomListUnitTest
             CustomList<int> collectionOfNumbers = new CustomList<int>();
 
             int number = 9;
-            //int number1 = 10;
+            int number1 = 10;
             int expected = 0;
             int actual;
 
             // Act
-            //collectionOfNumbers.AddMethod(number);
-            //collectionOfNumbers.AddMethod(number1);
+            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.AddMethod(number1);
             collectionOfNumbers.RemoveMethod(number);
             actual = collectionOfNumbers.Count;
            
