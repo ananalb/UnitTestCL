@@ -8,7 +8,7 @@ namespace CustomListUnitTest
     class MinusOverload
     {
         [TestMethod]
-        public void Remove_ItemsFromList_ResultIsFiveAndSeven()
+        public void Remove_ItemsFromListOne_ResultIsFive()
             {
 
                 //Arrange
@@ -42,7 +42,7 @@ namespace CustomListUnitTest
 
 
         [TestMethod]
-        public void Add_ItemsToLists_ListOneHasFiveValuesListTwoHasThree()
+        public void Remove_MinusFromListOne_ExpectedResultIsFiveEightNine()
         {
 
             //Arrange
@@ -77,6 +77,39 @@ namespace CustomListUnitTest
             // Assert
             Assert.AreEqual(expected, actual.ToString());
         }
-    }
+
+        [TestMethod]
+        public void Remove_MinusFromListTwo_ExpectedResultIsSeven()
+        {
+
+            //Arrange
+            CustomList<int> one = new CustomList<int>();
+            CustomList<int> two = new CustomList<int>();
+
+
+            int number = 1;
+            int number1 = 3;
+            int number2 = 5;
+            int number3 = 7;
+            string expected = "7";
+            string actual;
+
+            // Act
+
+            one.AddMethod(number); //1
+            one.AddMethod(number1); //3
+            one.AddMethod(number2);//5
+            two.AddMethod(number1); //3
+            two.AddMethod(number3); //7
+            two.AddMethod(number); //1
+
+
+            actual = two - one;
+
+
+            // Assert
+            Assert.AreEqual(expected, actual.ToString());
+        }
+        }
     }
 
