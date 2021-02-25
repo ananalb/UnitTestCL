@@ -56,7 +56,7 @@ namespace CustomListUnitTest
             int number3 = 7;
             int number4 = 8;
             int number5 = 9;
-            string expected = "1,3,5,8,9,3,7,1";
+            string expected = "5,8,9";
             string actual;
 
             // Act
@@ -71,7 +71,7 @@ namespace CustomListUnitTest
             two.AddMethod(number); //1
 
 
-            actual = one + two;
+            actual = one - two;
 
 
             // Assert
