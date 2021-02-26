@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListUnitTestProj;
 
 namespace CustomListUnitTest
@@ -21,8 +21,8 @@ namespace CustomListUnitTest
             int number1 = 3;
             int number2 = 5;
             int number3 = 7;
-            string expected = "1,3,5,3,7,1";
-            string actual;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual;
 
             // Act
 
@@ -35,10 +35,11 @@ namespace CustomListUnitTest
 
 
             actual = one + two;
+            
 
 
             // Assert
-            Assert.AreEqual(expected, actual.ToString());
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 
         [TestMethod]
@@ -56,8 +57,8 @@ namespace CustomListUnitTest
             int number3 = 7;
             int number4 = 8;
             int number5 = 9;
-            string expected = "1,3,5,8,9,3,7,1";
-            string actual;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual;
 
             // Act
 
@@ -75,7 +76,7 @@ namespace CustomListUnitTest
 
 
             // Assert
-            Assert.AreEqual(expected, actual.ToString());
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
 
         [TestMethod]
@@ -87,14 +88,14 @@ namespace CustomListUnitTest
             CustomList<int> two = new CustomList<int>();
 
 
-            int number = 1;
+            int number =  1;
             int number1 = 3;
             int number2 = 5;
             int number3 = 7;
             int number4 = 8;
             int number5 = 9;
-            string expected = "1,3,5,3,7,1,8,9";
-            string actual;
+            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> actual;
 
             // Act
 
@@ -112,7 +113,7 @@ namespace CustomListUnitTest
 
 
             // Assert
-            Assert.AreEqual(expected, actual.ToString());
+            Assert.AreEqual(expected.ToString(), actual.ToString());
         }
     }
 }

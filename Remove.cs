@@ -8,7 +8,7 @@ namespace CustomListUnitTest
     public class Remove
     {
         [TestMethod]
-        public void Remove_Item_CountDecreasesByOne()
+        public void Remove_ItemFromIndex_CountDecreasesByOne()
         {
             
             //Arrange
@@ -16,7 +16,7 @@ namespace CustomListUnitTest
 
             int number = 9;
             int number1 = 10;
-            int expected = 0;
+            int expected = 1;
             int actual;
 
             // Act
@@ -31,7 +31,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Remove_ItemFromIndex_IndexCapacityFour()
+        public void Remove_ItemsFromIndex_IndexCapacityFour()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
@@ -79,7 +79,7 @@ namespace CustomListUnitTest
             Assert.AreEqual(expected, actual);
         }
 
-        public void Remove_ItemFromList_CountOfSix()
+        public void Remove_ItemFromList_ExpectedCountOfSix()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
@@ -110,7 +110,7 @@ namespace CustomListUnitTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void Remove_ItemsFromIndex_IndexCapacityEight()
+        public void Remove_ItemsFromIndex_IndexCapacityOfEight()
         {
             CustomList<int> collectionOfNumbers = new CustomList<int>();
 

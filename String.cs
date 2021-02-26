@@ -1,5 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using CustomListUnitTestProj;
 
 namespace CustomListUnitTest
@@ -8,7 +8,7 @@ namespace CustomListUnitTest
     public class String
     {
         [TestMethod]
-        public void add_nametoindex_nameatindexzero()
+        public void add_StringToIndex_StringAddedLara()
         {
 
             CustomList<string> collectionofnames = new CustomList<string>();
@@ -26,7 +26,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Add_StringsToIndex_CountOfStringsTwo()
+        public void Add_StringsToIndex_ConcatenatedStringsLaraEve()
         {
 
             CustomList<string> collectionOfNames = new CustomList<string>();
@@ -46,7 +46,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Add_StringsToIndex_IndexCapacityFour()
+        public void Add_StringsToIndex_ExpectedString234()
         {
 
             CustomList<int> collectionOfNumbers = new CustomList<int>();
