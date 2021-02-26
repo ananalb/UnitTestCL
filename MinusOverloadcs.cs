@@ -1,116 +1,116 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CustomListUnitTestProj;
+﻿//using System;
+//using Microsoft.VisualStudio.TestTools.UnitTesting;
+//using CustomListUnitTestProj;
 
-namespace CustomListUnitTest
-{
-    [TestClass]
-    class MinusOverload
-    {
-        [TestMethod]
-        public void Remove_ItemsFromListOne_ResultIsFive()
-        {
+//namespace CustomListUnitTest
+//{
+//    [TestClass]
+//    class MinusOverload
+//    {
+//        [TestMethod]
+//        public void Remove_ItemsFromListOne_ResultIsFive()
+//        {
 
-            //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
-
-
-            int number = 1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            string expected = "5";
-            string actual;
-
-            // Act
-
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
+//            //Arrange
+//            CustomList<int> one = new CustomList<int>();
+//            CustomList<int> two = new CustomList<int>();
 
 
-            string one1 = one.ToString();
-            string two2 = two.ToString();
-            actual =
+//            int number = 1;
+//            int number1 = 3;
+//            int number2 = 5;
+//            int number3 = 7;
+//            string expected = "5";
+//            string actual;
+
+//            // Act
+
+//            one.AddMethod(number); //1
+//            one.AddMethod(number1); //3
+//            one.AddMethod(number2);//5
+//            two.AddMethod(number1); //3
+//            two.AddMethod(number3); //7
+//            two.AddMethod(number); //1
 
 
-            // Assert
-            Assert.AreEqual(expected, actual);
-        }
+//            string one1 = one.ToString();
+//            string two2 = two.ToString();
+//            actual =
 
 
-        [TestMethod]
-        public void Remove_MinusFromListOne_ExpectedResultIsFiveEightNine()
-        {
-
-            //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
+//            // Assert
+//            Assert.AreEqual(expected, actual);
+//        }
 
 
-            int number =  1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            int number4 = 8;
-            int number5 = 9;
-            CustomList<int> expected = new CustomList<int>();
-            CustomList<int> actual;
+//        [TestMethod]
+//        public void Remove_MinusFromListOne_ExpectedResultIsFiveEightNine()
+//        {
 
-            // Act
-
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            one.AddMethod(number4); //8
-            one.AddMethod(number5); //9
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
+//            //Arrange
+//            CustomList<int> one = new CustomList<int>();
+//            CustomList<int> two = new CustomList<int>();
 
 
-            actual = one - two;
+//            int number =  1;
+//            int number1 = 3;
+//            int number2 = 5;
+//            int number3 = 7;
+//            int number4 = 8;
+//            int number5 = 9;
+//            CustomList<int> expected = new CustomList<int>();
+//            CustomList<int> actual;
+
+//            // Act
+
+//            one.AddMethod(number); //1
+//            one.AddMethod(number1); //3
+//            one.AddMethod(number2);//5
+//            one.AddMethod(number4); //8
+//            one.AddMethod(number5); //9
+//            two.AddMethod(number1); //3
+//            two.AddMethod(number3); //7
+//            two.AddMethod(number); //1
 
 
-            // Assert
-            Assert.AreEqual(expected.ToString(), actual.ToString());
-        }
-
-        [TestMethod]
-        public void Remove_MinusFromListTwo_ExpectedResultIsSeven()
-        {
-
-            //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
+//            actual = one - two;
 
 
-            int number = 1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            string expected = "7";
-            string actual;
+//            // Assert
+//            Assert.AreEqual(expected.ToString(), actual.ToString());
+//        }
 
-            // Act
+//        [TestMethod]
+//        public void Remove_MinusFromListTwo_ExpectedResultIsSeven()
+//        {
 
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
+//            //Arrange
+//            CustomList<int> one = new CustomList<int>();
+//            CustomList<int> two = new CustomList<int>();
 
 
-            actual = two - one;
+//            int number = 1;
+//            int number1 = 3;
+//            int number2 = 5;
+//            int number3 = 7;
+//            string expected = "7";
+//            string actual;
+
+//            // Act
+
+//            one.AddMethod(number); //1
+//            one.AddMethod(number1); //3
+//            one.AddMethod(number2);//5
+//            two.AddMethod(number1); //3
+//            two.AddMethod(number3); //7
+//            two.AddMethod(number); //1
 
 
-            // Assert
-            Assert.AreEqual(expected, actual.ToString());
-        }
-    }
-}
+//            actual = two - one;
+
+
+//            // Assert
+//            Assert.AreEqual(expected, actual.ToString());
+//        }
+    //}
+//}
