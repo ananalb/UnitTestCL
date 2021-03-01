@@ -42,5 +42,17 @@ namespace CustomListUnitTest
 
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
+
+        [TestMethod]
+        public void Zip_ListOneIsEmpty_ResultIsTwoFourSix()
+        {
+            CustomList<int> one = new CustomList<int>() {};
+            CustomList<int> two = new CustomList<int>() { 2, 4, 6 };
+
+            CustomList<int> expected = new CustomList<int> { 2,4,6 };
+            CustomList<int> actual = CustomList<int>.Zip(one, two);
+
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
     }
 }
