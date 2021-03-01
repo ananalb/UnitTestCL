@@ -54,5 +54,17 @@ namespace CustomListUnitTest
 
             Assert.AreEqual(expected.ToString(), actual.ToString());
         }
+
+        [TestMethod]
+        public void Zip_ListTwoIsEmpty_ResultIs123()
+        {
+            CustomList<int> one = new CustomList<int>() {1,2,3 };
+            CustomList<int> two = new CustomList<int>() { };
+
+            CustomList<int> expected = new CustomList<int> {1,2,3 };
+            CustomList<int> actual = CustomList<int>.Zip(one, two);
+
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
     }
 }
