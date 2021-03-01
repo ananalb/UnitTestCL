@@ -20,9 +20,9 @@ namespace CustomListUnitTest
             int actual;
 
             // Act
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.RemoveMethod(number);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Remove(number);
             actual = collectionOfNumbers.Count;
            
 
@@ -44,11 +44,11 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.RemoveMethod(number1);
-            collectionOfNumbers.RemoveMethod(number2);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Remove(number1);
+            collectionOfNumbers.Remove(number2);
             actual = collectionOfNumbers.Capacity;
 
             // Assert
@@ -68,10 +68,10 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.RemoveMethod(number);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Remove(number);
             actual = collectionOfNumbers[0];
            
 
@@ -96,14 +96,14 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.AddMethod(number3);
-            collectionOfNumbers.AddMethod(number4);
-            collectionOfNumbers.AddMethod(number5);
-            collectionOfNumbers.AddMethod(number6);
-            collectionOfNumbers.RemoveMethod(number);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
+            collectionOfNumbers.Add(number4);
+            collectionOfNumbers.Add(number5);
+            collectionOfNumbers.Add(number6);
+            collectionOfNumbers.Remove(number);
             actual = collectionOfNumbers.Count;
 
             // Assert
@@ -126,16 +126,38 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.AddMethod(number3);
-            collectionOfNumbers.AddMethod(number4);
-            collectionOfNumbers.AddMethod(number5);
-            collectionOfNumbers.AddMethod(number6);
-            collectionOfNumbers.RemoveMethod(number);
-            collectionOfNumbers.RemoveMethod(number1);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
+            collectionOfNumbers.Add(number4);
+            collectionOfNumbers.Add(number5);
+            collectionOfNumbers.Add(number6);
+            collectionOfNumbers.Remove(number);
+            collectionOfNumbers.Remove(number1);
             actual = collectionOfNumbers.Capacity;
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void Remove_ItemNotInList_CountStaysSame()
+        {
+
+            //Arrange
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+            int number = 9;
+            int number1 = 10;
+            int expected = 2;
+            int actual;
+
+            // Act
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Remove(500);
+            actual = collectionOfNumbers.Count;
+
 
             // Assert
             Assert.AreEqual(expected, actual);

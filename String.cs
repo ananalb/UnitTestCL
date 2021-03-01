@@ -18,7 +18,7 @@ namespace CustomListUnitTest
             string actual;
 
             // act           
-            collectionofnames.AddMethod(name);
+            collectionofnames.Add(name);
             actual = collectionofnames.ToString();
 
             // assert
@@ -37,8 +37,8 @@ namespace CustomListUnitTest
             string actual;
 
             // Act           
-            collectionOfNames.AddMethod(name);
-            collectionOfNames.AddMethod(name1);
+            collectionOfNames.Add(name);
+            collectionOfNames.Add(name1);
             actual = collectionOfNames.ToString();
 
             // Assert
@@ -59,9 +59,9 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.AddMethod(number3);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
             actual = collectionOfNumbers.ToString(); 
 
             // Assert

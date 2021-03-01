@@ -20,7 +20,7 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.Add(number);
             actual = collectionOfNumbers.Count;
 
             // Assert
@@ -38,7 +38,7 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.Add(number);
             actual = collectionOfNumbers.Capacity;
 
             // Assert
@@ -56,7 +56,7 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
+            collectionOfNumbers.Add(number);
             actual = collectionOfNumbers[0];
 
             // Assert
@@ -75,8 +75,8 @@ namespace CustomListUnitTest
             int actual;
 
             // Act
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
             actual = collectionOfNumbers[1];
 
             // Assert
@@ -101,11 +101,11 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.AddMethod(number3);
-            collectionOfNumbers.AddMethod(number4);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
+            collectionOfNumbers.Add(number4);
             actual = collectionOfNumbers.Count;
 
             // Assert
@@ -127,11 +127,11 @@ namespace CustomListUnitTest
 
             // Act
 
-            collectionOfNumbers.AddMethod(number);
-            collectionOfNumbers.AddMethod(number1);
-            collectionOfNumbers.AddMethod(number2);
-            collectionOfNumbers.AddMethod(number3);
-            collectionOfNumbers.AddMethod(number4);
+            collectionOfNumbers.Add(number);
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
+            collectionOfNumbers.Add(number4);
             actual = collectionOfNumbers.Capacity;
 
             // Assert

@@ -5,7 +5,7 @@ using CustomListUnitTestProj;
 namespace CustomListUnitTest
 {
     [TestClass]
-    class PlusOverload
+    public class PlusOverload
 
     {
         [TestMethod]
@@ -26,13 +26,19 @@ namespace CustomListUnitTest
 
             // Act
 
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
+            one.Add(number); //1
+            one.Add(number1); //3
+            one.Add(number2);//5
+            two.Add(number1); //3
+            two.Add(number3); //7
+            two.Add(number); //1
 
+            expected.Add(number); //1
+            expected.Add(number1); //3
+            expected.Add(number2);//5
+            expected.Add(number1); //3
+            expected.Add(number3); //7
+            expected.Add(number); //1
 
             actual = one + two;
             
@@ -62,17 +68,29 @@ namespace CustomListUnitTest
 
             // Act
 
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            one.AddMethod(number4); //8
-            one.AddMethod(number5); //9
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
+            one.Add(number); //1
+            one.Add(number1); //3
+            one.Add(number2);//5
+            one.Add(number4); //8
+            one.Add(number5); //9
+            two.Add(number1); //3
+            two.Add(number3); //7
+            two.Add(number); //1
+
+            expected.Add(number);//1
+            expected.Add(number1); //3
+            expected.Add(number2);//5
+            expected.Add(number4); //8
+            expected.Add(number5); //9
+            expected.Add(number1); //3
+            expected.Add(number3); //7
+            expected.Add(number); //1
+
 
 
             actual = one + two;
+            
+
 
 
             // Assert
@@ -99,14 +117,23 @@ namespace CustomListUnitTest
 
             // Act
 
-            one.AddMethod(number); //1
-            one.AddMethod(number1); //3
-            one.AddMethod(number2);//5
-            two.AddMethod(number1); //3
-            two.AddMethod(number3); //7
-            two.AddMethod(number); //1
-            two.AddMethod(number4); //8
-            two.AddMethod(number5); //9
+            one.Add(number); //1
+            one.Add(number1); //3
+            one.Add(number2);//5
+            two.Add(number1); //3
+            two.Add(number3); //7
+            two.Add(number); //1
+            two.Add(number4); //8
+            two.Add(number5); //9
+
+            expected.Add(number); //1
+            expected.Add(number1); //3
+            expected.Add(number2);//5
+            expected.Add(number1); //3
+            expected.Add(number3); //7
+            expected.Add(number); //1
+            expected.Add(number4); //8
+            expected.Add(number5); //9
 
 
             actual = one + two;
