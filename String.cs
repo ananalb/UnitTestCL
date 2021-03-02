@@ -8,7 +8,7 @@ namespace CustomListUnitTest
     public class String
     {
         [TestMethod]
-        public void add_StringToIndex_StringAddedLara()
+        public void Add_StringToIndex_StringAddedLara()
         {
 
             CustomList<string> collectionofnames = new CustomList<string>();
@@ -67,6 +67,32 @@ namespace CustomListUnitTest
             // Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void Add_StringsToIndex_ExpectedString2345()
+        {
+
+            CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+            int number1 = 2;
+            int number2 = 3;
+            int number3 = 4;
+            int number4 = 5;
+            string expected = "2345";
+            string actual;
+
+            // Act
+
+            collectionOfNumbers.Add(number1);
+            collectionOfNumbers.Add(number2);
+            collectionOfNumbers.Add(number3);
+            collectionOfNumbers.Add(number4);
+            actual = collectionOfNumbers.ToString();
+
+            // Assert
+            Assert.AreEqual(expected, actual);
+        }
+
 
 
 

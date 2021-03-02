@@ -27,7 +27,7 @@ namespace CustomListUnitTest
 
 
         [TestMethod]
-        public void Remove_MinusFromListOne_ExpectedResultIsFiveEightNine()
+        public void Remove_ItemsFromListOne_ExpectedResultIs589()
         {
 
             //arrange
@@ -46,7 +46,7 @@ namespace CustomListUnitTest
         }
 
         [TestMethod]
-        public void Remove_MinusFromListTwo_ExpectedResultIsSeven()
+        public void Remove_MinusFromListTwo_ExpectedResultIs7()
         {
 
             //arrange
@@ -58,6 +58,24 @@ namespace CustomListUnitTest
 
             // act
             actual = two - one;
+
+            // assert
+            Assert.AreEqual(expected.ToString(), actual.ToString());
+        }
+
+        [TestMethod]
+        public void Remove_EmptyListTwofromListOne_ResultIs135()
+        {
+
+            //arrange
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() {};
+
+            CustomList<int> expected = new CustomList<int>() { 1,3,5 };
+            CustomList<int> actual;
+
+            // act
+            actual = one - two;
 
             // assert
             Assert.AreEqual(expected.ToString(), actual.ToString());

@@ -13,32 +13,13 @@ namespace CustomListUnitTest
         {
 
             //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5 };
+            CustomList<int> two = new CustomList<int>() { 3, 7, 1 };
 
-
-            int number = 1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 3, 7, 1 };
             CustomList<int> actual;
 
             // Act
-
-            one.Add(number); //1
-            one.Add(number1); //3
-            one.Add(number2);//5
-            two.Add(number1); //3
-            two.Add(number3); //7
-            two.Add(number); //1
-
-            expected.Add(number); //1
-            expected.Add(number1); //3
-            expected.Add(number2);//5
-            expected.Add(number1); //3
-            expected.Add(number3); //7
-            expected.Add(number); //1
 
             actual = one + two;
             
@@ -53,45 +34,15 @@ namespace CustomListUnitTest
         {
 
             //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
+            CustomList<int> one = new CustomList<int>() { 1, 3, 5, 8, 9 };
+            CustomList<int> two = new CustomList<int>() { 3, 7, 1 };
 
-
-            int number = 1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            int number4 = 8;
-            int number5 = 9;
-            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>() { 1, 3, 5, 8, 9, 3, 7, 1 };
             CustomList<int> actual;
 
             // Act
 
-            one.Add(number); //1
-            one.Add(number1); //3
-            one.Add(number2);//5
-            one.Add(number4); //8
-            one.Add(number5); //9
-            two.Add(number1); //3
-            two.Add(number3); //7
-            two.Add(number); //1
-
-            expected.Add(number);//1
-            expected.Add(number1); //3
-            expected.Add(number2);//5
-            expected.Add(number4); //8
-            expected.Add(number5); //9
-            expected.Add(number1); //3
-            expected.Add(number3); //7
-            expected.Add(number); //1
-
-
-
             actual = one + two;
-            
-
-
 
             // Assert
             Assert.AreEqual(expected.ToString(), actual.ToString());
@@ -102,38 +53,13 @@ namespace CustomListUnitTest
         {
 
             //Arrange
-            CustomList<int> one = new CustomList<int>();
-            CustomList<int> two = new CustomList<int>();
+            CustomList<int> one = new CustomList<int>() { 1,3,5};
+            CustomList<int> two = new CustomList<int>() { 3,7,1,8,9};
 
-
-            int number =  1;
-            int number1 = 3;
-            int number2 = 5;
-            int number3 = 7;
-            int number4 = 8;
-            int number5 = 9;
-            CustomList<int> expected = new CustomList<int>();
+            CustomList<int> expected = new CustomList<int>() {1,3,5,3,7,1,8,9};
             CustomList<int> actual;
 
             // Act
-
-            one.Add(number); //1
-            one.Add(number1); //3
-            one.Add(number2);//5
-            two.Add(number1); //3
-            two.Add(number3); //7
-            two.Add(number); //1
-            two.Add(number4); //8
-            two.Add(number5); //9
-
-            expected.Add(number); //1
-            expected.Add(number1); //3
-            expected.Add(number2);//5
-            expected.Add(number1); //3
-            expected.Add(number3); //7
-            expected.Add(number); //1
-            expected.Add(number4); //8
-            expected.Add(number5); //9
 
 
             actual = one + two;
